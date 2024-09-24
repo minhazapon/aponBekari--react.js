@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 
@@ -75,6 +76,18 @@ const Baking = () => {
              </div>
 
 
+
+            </div>
+
+
+            <div>
+               <p className=" font-mono text-center text-5xl mt-10">Add Your Items</p>
+               <div className=" flex justify-center mt-5">
+                  <Link to='/addForm' >
+                   <button className=" btn  border-[1px] border-[#4de7e2] ">AddItems</button>
+                  </Link>
+              
+               </div>
 
             </div>
             

@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Root from './Root.jsx';
 import Home from './Home.jsx';
+import Create from './crud files/Create.jsx';
+import Update from './crud files/Update.jsx';
 
 
 const router = createBrowserRouter([
@@ -18,6 +20,15 @@ const router = createBrowserRouter([
       {
         path: "/",
         element:  <Home></Home>  ,
+      },
+      {
+        path: "/addForm",
+        element:  <Create></Create>  ,
+      },
+      {
+        path: "/update/:id",
+        element:  <Update></Update>  ,
+        loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
       },
     ],
   },
