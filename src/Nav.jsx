@@ -6,7 +6,7 @@ const Nav = () => {
 
     const navz = <>
        
-       <div className=" flex-col md:flex-row lg:flex-row flex items-center gap-5">
+       <div className=" flex-col md:flex-row lg:flex-row  flex items-center gap-5">
        <li className=" border-[1px] border-[#4de7e2] rounded-lg font-mono" ><NavLink to='/' >Home</NavLink></li>
        <li className="  border-[1px] border-[#4de7e2] rounded-lg font-mono" ><NavLink to='/products' >Products</NavLink></li>
        <li className="  border-[1px] border-[#4de7e2] rounded-lg font-mono" ><NavLink to='/contact' >Contact</NavLink></li>
