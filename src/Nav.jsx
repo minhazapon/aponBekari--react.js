@@ -11,11 +11,11 @@ const Nav = () => {
 
     const navz = <>
        <div className=" flex-col md:flex-row lg:flex-row  flex items-center gap-5">
-       <li className=" border-[1px] border-[#4de7e2] rounded-lg font-mono" ><NavLink to='/' >Home</NavLink></li>
-       <li className="  border-[1px] border-[#4de7e2] rounded-lg font-mono" ><NavLink to='/products' >Products</NavLink></li>
+       <li className=" w-[100px]  text-center border-[1px] border-[#4de7e2] rounded-lg font-mono" ><NavLink className='text-center' to='/' >Home</NavLink></li>
+       <li className="  w-[100px] text-center border-[1px] border-[#4de7e2] rounded-lg font-mono" ><NavLink to='/products' >Products</NavLink></li>
        { users && <>
        
-       <li className="  border-[1px] border-[#4de7e2] rounded-lg font-mono" ><NavLink to='/list' >userList</NavLink></li>
+       <li className=" w-[100px] text-center  border-[1px] border-[#4de7e2] rounded-lg font-mono" ><NavLink to='/list' >userList</NavLink></li>
 
        </>
 
