@@ -11,6 +11,7 @@ import Home from './Home.jsx';
 import Create from './crud files/Create.jsx';
 import Update from './crud files/Update.jsx';
 import Products from './products file/Products.jsx';
+import PrivateRoute from './firebase sign/PrivateRoute.jsx'
 
 
 import {
@@ -20,6 +21,9 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import Login from './firebase sign/Login.jsx';
+import SignUp from './firebase sign/SignUp.jsx';
+import AuthContext from './firebase sign/AuthContext.jsx';
 
 // Create a client
 const queryClient = new QueryClient()
@@ -45,7 +49,17 @@ const router = createBrowserRouter([
       },
       {
         path: "products",
-        element:   <Products></Products>  ,
+        element: <PrivateRoute><Products></Products></PrivateRoute>  ,
+  
+      },
+      {
+        path: "login",
+        element:  <Login></Login> ,
+  
+      },
+      {
+        path: "up",
+        element:  <SignUp></SignUp> ,
   
       },
     ],
@@ -57,7 +71,9 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
 
     <QueryClientProvider client={queryClient}>
-    <RouterProvider router={router} />
+      <AuthContext>
+      <RouterProvider router={router} />
+      </AuthContext>
     </QueryClientProvider>
      
   </StrictMode>,
