@@ -24,6 +24,7 @@ import {
 import Login from './firebase sign/Login.jsx';
 import SignUp from './firebase sign/SignUp.jsx';
 import AuthContext from './firebase sign/AuthContext.jsx';
+import UserList from './crud files/UserList.jsx';
 
 // Create a client
 const queryClient = new QueryClient()
@@ -60,6 +61,11 @@ const router = createBrowserRouter([
       {
         path: "up",
         element:  <SignUp></SignUp> ,
+  
+      },
+      {
+        path: "list",
+        element:  <UserList></UserList> ,
   
       },
     ],

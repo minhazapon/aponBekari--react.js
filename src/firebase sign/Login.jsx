@@ -23,6 +23,28 @@ const Login = () => {
             console.log(result)
             e.target.reset()
             navigate('/')
+              ////signDataCollection/////
+            const signData = {email}
+            fetch('http://localhost:5000/signData',{
+             method: 'POST',
+             headers: {
+                'content-type': 'application/json'
+             },
+             body: JSON.stringify(signData)
+            })
+            .then( res => res.json())
+            .then(data => {
+                console.log(data)
+                if(data.insertedId){
+                   
+                    console.log('signData Get In database')
+
+                }
+            })
+
+          
+
+
         } )
         .catch( error =>{
             console.error(error)
@@ -65,9 +87,9 @@ const Login = () => {
                 </svg>
                 <p>Login with Google</p>
             </button>
-            {/* {
-                 navigate('/')
-            } */}
+            {
+                navigate('/')
+            }
         </div>
       
         <div className="flex items-center w-full my-4">
